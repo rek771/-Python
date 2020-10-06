@@ -1,13 +1,14 @@
-# 1. Создать список и заполнить его элементами различных типов данных. Реализовать скрипт проверки типа данных каждого
-# элемента. Использовать функцию type() для проверки типа. Элементы списка можно не запрашивать у пользователя,
-# а указать явно, в программе.
+# 1. Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление. Числа запрашивать у
+# пользователя, предусмотреть обработку ситуации деления на ноль.
 
-our_list = [1, 'text', ('t', 'upl', 'e'),555, {'text': '1', 'dig': 2}]
-check_tuple = ("<class 'int'>", "<class 'str'>", "<class 'tuple'>", "<class 'dict'>", "<class 'dict'>")
+def divide(num1, num2):
+    try:
+        return num1 / num2
+    except ZeroDivisionError:
+        return 'Деление на ноль'
 
-print(len(our_list))
-for i in range(len(our_list)):
-    if str(type(our_list[i])) == check_tuple[i]:
-        print(f'Элемент {our_list[i]} действительно {check_tuple[i]}')
-    else:
-        print(f'Элемент {our_list[i]} не {check_tuple[i]}')
+
+num1 = int(input('Введите число 1: '))
+num2 = int(input('Введите число 2: '))
+
+print(divide(num1, num2))
