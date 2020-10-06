@@ -1,6 +1,11 @@
-# 3. Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn. Например, пользователь ввёл число 3.
-# Считаем 3 + 33 + 333 = 369.
+# 3. Реализовать функцию my_func(), которая принимает три позиционных аргумента, и возвращает сумму наибольших
+# двух аргументов.
 
-number = input('Введите число n: ')
+def my_func(*args):
+    if len(args) != 3:
+        return 'Неверное количество аргументов'
 
-print(f'{number} + {number + number} + {number + number} = {int(number) + int(number + number) + int(number + number + number)}')
+    return sum(args) - min(args)
+
+
+print(my_func(1, 2, 5))
