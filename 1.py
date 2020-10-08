@@ -1,9 +1,14 @@
-# 1. Поработайте с переменными, создайте несколько, выведите на экран, запросите у пользователя несколько чисел и строк
-# и сохраните в переменные, выведите на экран.
-var1 = 'str'
-var2 = 5
-var3 = input('Введите что нибудь: ')
+# 1. Реализовать скрипт, в котором должна быть предусмотрена функция расчета заработной платы сотрудника. В расчете
+# необходимо использовать формулу: (выработка в часах * ставка в час) + премия. Для выполнения расчета для конкретных
+# значений необходимо запускать скрипт с параметрами.
 
-print(var1)
-print(var2)
-print(var3)
+import argparse
+
+parser = argparse.ArgumentParser(description='(выработка в часах * ставка в час) + премия')
+parser.add_argument('-hours', dest='hours', action="store", help='Выработка в часах', type=int)
+parser.add_argument('-rate', dest='rate', action="store", help='Ставка в час', type=int)
+parser.add_argument('-bonus', dest='bonus', action="store", help='Премия', type=int)
+
+args = parser.parse_args()
+
+print(f'Зарплата сотрудника {(args.hours * args.rate) + args.bonus}')

@@ -1,6 +1,5 @@
-# 3. Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn. Например, пользователь ввёл число 3.
-# Считаем 3 + 33 + 333 = 369.
+# 3. Для чисел в пределах от 20 до 240 найти числа, кратные 20 или 21. Необходимо решить задание в одну строку.
+# Подсказка: использовать функцию range() и генератор.
 
-number = input('Введите число n: ')
-
-print(f'{number} + {number + number} + {number + number} = {int(number) + int(number + number) + int(number + number + number)}')
+result = [num for num in range(20, 241) if num % 20 == 0 or num % 21 == 0]
+print(result)
