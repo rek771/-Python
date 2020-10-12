@@ -1,13 +1,36 @@
-# 5. Создать (программно) текстовый файл, записать в него программно набор чисел, разделенных пробелами. Программа
-# должна подсчитывать сумму чисел в файле и выводить ее на экран.
+# 5. Реализовать класс Stationery (канцелярская принадлежность). Определить в нем атрибут title (название) и метод draw
+# (отрисовка). Метод выводит сообщение “Запуск отрисовки.” Создать три дочерних класса Pen (ручка), Pencil (карандаш),
+# Handle (маркер). В каждом из классов реализовать переопределение метода draw. Для каждого из классов методы должен
+# выводить уникальное сообщение. Создать экземпляры классов и проверить, что выведет описанный метод для каждого
+# экземпляра.
 
-with open("5", "w+", encoding='utf-8') as file:
-    file.write(str(input('Введите числа через пробел: ')))
-    file.seek(0)
+class Stationery:
+    def __init__(self, title):
+        self.title = title
 
-    lines = file.readline().split()
-    my_summ = 0
-    for line in lines:
-        my_summ += int(line)
+    def draw(self):
+        return 'Запуск отрисовки. Stationery ' + self.title
 
-print(my_summ)
+
+class Pen(Stationery):
+    def draw(self):
+        return 'Запуск отрисовки. Pen ' + self.title
+
+
+class Pencil(Stationery):
+    def draw(self):
+        return 'Запуск отрисовки. Pencil ' + self.title
+
+
+class Handle(Stationery):
+    def draw(self):
+        return 'Запуск отрисовки. Handle ' + self.title
+
+
+pen = Pen('ручка')
+pencil = Pencil('карандаш')
+handle = Handle('маркер')
+
+print(pen.draw())
+print(pencil.draw())
+print(handle.draw())
