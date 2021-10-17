@@ -55,6 +55,7 @@
 
 from random import randint
 
+
 class LotoCard:
     def __init__(self, player_name):
         self.player_name = player_name
@@ -85,7 +86,8 @@ class LotoCard:
         return sum([element.count(other) for element in self.card]) > 0
 
     def count(self):
-        return sum([sum([1 if element != '' and element != '-' else 0 for element in row_element]) for row_element in self.card])
+        return sum([sum([1 if element != '' and element != '-' else 0 for element in row_element]) for row_element in
+                    self.card])
 
 
 class LotoGame:
@@ -107,7 +109,7 @@ class LotoGame:
             if (answer == 'n' and human_player == barrel) or (answer == 'y' and human_player != barrel):
                 print('Вы проиграли, введено неправильное действие.')
                 break
-            elif (randint(0, 1000) == 0):
+            elif randint(0, 1000) == 0:
                 print('Робот проиграл, введено неправильное действие.')
                 break
             else:
