@@ -8,6 +8,8 @@
 
 import time
 from itertools import cycle
+
+
 class TrafficLight:
 
     def __init__(self):
@@ -15,7 +17,7 @@ class TrafficLight:
         self.running()
 
     def running(self):
-        for el in cycle(['Красный','Желтый','Зеленый']):
+        for el in cycle(['Красный', 'Желтый', 'Зеленый']):
             print(el)
             if el == 'Красный':
                 time.sleep(7)
@@ -23,5 +25,6 @@ class TrafficLight:
                 time.sleep(2)
             elif el == 'Зеленый':
                 time.sleep(5)
+
 
 lights = TrafficLight()

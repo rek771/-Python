@@ -11,8 +11,10 @@ class Road:
         self.__width = width
         self.__mass = 25
         self.__width = 5
-    def mass_asphalt(self):
-        return(self.__length*self.__width*self.__mass*self.__width)
 
-road = Road(20,5000)
+    def mass_asphalt(self):
+        return (self.__length * self.__width * self.__mass * self.__width)
+
+
+road = Road(20, 5000)
 print(road.mass_asphalt())
