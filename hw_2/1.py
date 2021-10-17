@@ -2,7 +2,7 @@
 # элемента. Использовать функцию type() для проверки типа. Элементы списка можно не запрашивать у пользователя,
 # а указать явно, в программе.
 
-our_list = [1, 'text', ('t', 'upl', 'e'),555, {'text': '1', 'dig': 2}]
+our_list = [1, 'text', ('t', 'upl', 'e'), 555, {'text': '1', 'dig': 2}]
 check_tuple = ("<class 'int'>", "<class 'str'>", "<class 'tuple'>", "<class 'dict'>", "<class 'dict'>")
 
 print(len(our_list))

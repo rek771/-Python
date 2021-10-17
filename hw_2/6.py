@@ -21,8 +21,10 @@
 # “ед”: [“шт.”]
 #
 # }
+
 our_list = []
 i = 1
+
 while True:
     title = input('Введите название: ')
     price = input('Введите стоимость: ')
