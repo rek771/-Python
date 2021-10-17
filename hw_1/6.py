@@ -25,7 +25,7 @@ while a >= b:
 result = a
 i = 0
 while result < b:
-    result = result+result/10
-    i = i+1
-    print(f'{i}-й день: {round(result,2)}')
+    result = result + result / 10
+    i = i + 1
+    print(f'{i}-й день: {round(result, 2)}')
 print(f'Ответ: на {i}-й день спортсмен достиг результата - не менее {b} км.')
